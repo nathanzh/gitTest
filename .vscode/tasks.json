@@ -1,0 +1,25 @@
+{
+    "version": "2.0.0",
+    "command": "g++",
+    "args": ["-g","${file}","-o","${fileBasenameNoExtension}.exe"], 
+  //  "args": ["-std==c++17","-g","${file}","-o","${fileBasenameNoExtension}.exe"], 
+    // 编译命令参数, 可以加多文件 在 “-o” 之前
+    //"args": ["-g","${file}","pp481_13.2.cpp","-o","${fileBasenameNoExtension}.exe"], // 编译命令参数, 可以加多文件 在 “-o” 之前
+   // "args": ["-c","${file}"], // 编译命令参数, 可以加多文件 在 “-o” 之前
+    "problemMatcher": {
+        "owner": "cpp",
+        "fileLocation": ["relative", "${workspaceRoot}"],
+        "pattern": {
+            "regexp": "^(.*):(\\d+):(\\d+):\\s+(warning|error):\\s+(.*)$",
+            "file": 1,
+            "line": 2,
+            "column": 3,
+            "severity": 4,
+            "message": 5
+        }
+    },
+    "group": {
+        "kind": "build",
+        "isDefault": true
+    }
+}
